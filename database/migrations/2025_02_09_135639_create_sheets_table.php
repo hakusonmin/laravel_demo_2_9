@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('sheets', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 255)->unique();
+            $table->foreignId('hall_id')->constrained();
             $table->timestamps();
         });
     }
@@ -25,3 +27,4 @@ return new class extends Migration
         Schema::dropIfExists('sheets');
     }
 };
+

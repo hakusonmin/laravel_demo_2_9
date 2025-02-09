@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('movie_sheets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('movie_id')->constrained();
+            $table->foreignId('sheet_id')->constrained();
+            $table->datetime('schedule');
+            $table->unsignedInteger('price');
+            $table->boolean('is_reserved');
             $table->timestamps();
         });
     }
