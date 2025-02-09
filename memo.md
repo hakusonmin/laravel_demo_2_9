@@ -5,3 +5,8 @@
 php artisan migrate
 先に npm run dev
 その後 php artisan serve --port=xxxx
+
+//その後
+.git を削除
+git init 
+あとはいつもの手順
