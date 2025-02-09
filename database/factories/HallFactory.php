@@ -20,7 +20,7 @@ class HallFactory extends Factory
 
         return [
             'id' => $count++,
-            'title' => $this->faker->unique()->word,
+            'title' => 'Aホール',
         ];
     }
 }

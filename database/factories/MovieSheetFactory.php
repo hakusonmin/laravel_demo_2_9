@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Movie;
+use App\Models\Sheet;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -26,6 +27,7 @@ class MovieSheetFactory extends Factory
             'price' => $this->faker->randomNumber,
             'is_reserved' => $this->faker->boolean,
             'movie_id' => Movie::factory(),
+            'sheet_id' => Sheet::factory(),
         ];
     }
 }

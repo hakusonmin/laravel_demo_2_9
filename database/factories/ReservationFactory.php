@@ -23,8 +23,7 @@ class ReservationFactory extends Factory
         return [
             'id' => $count++,
             'user_id' => User::factory(),
-            'movie_sheets_id' => MovieSheet::factory(),
-            'is_canceled' => $this->faker->boolean,
+            'movie_sheet_id' => MovieSheet::factory(),
         ];
     }
 }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sheets', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 255)->unique();
+            $table->string('title', 255);
             $table->foreignId('hall_id')->constrained();
             $table->timestamps();
         });
