@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,15 @@ class MovieSheetFactory extends Factory
      */
     public function definition(): array
     {
+        static $count = 1;
+
         return [
-            //
+            'id' => $count++,
+            'start_datetime' => $this->faker->dateTime(),
+            'end_datetime' => $this->faker->dateTime(),
+            'price' => $this->faker->randomNumber,
+            'is_reserved' => $this->faker->boolean,
+            'movie_id' => Movie::factory(),
         ];
     }
 }

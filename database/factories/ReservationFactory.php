@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\MovieSheet;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +18,13 @@ class ReservationFactory extends Factory
      */
     public function definition(): array
     {
+        static $count = 1;
+
         return [
-            //
+            'id' => $count++,
+            'user_id' => User::factory(),
+            'movie_sheets_id' => MovieSheet::factory(),
+            'is_canceled' => $this->faker->boolean,
         ];
     }
 }

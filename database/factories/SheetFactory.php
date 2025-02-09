@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Hall;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,12 @@ class SheetFactory extends Factory
      */
     public function definition(): array
     {
+        static $count = 1;
+
         return [
-            //
+          'id' => $count++,
+          'title' => 'A-1',
+          'hall_id' => Hall::factory(),
         ];
     }
 }
