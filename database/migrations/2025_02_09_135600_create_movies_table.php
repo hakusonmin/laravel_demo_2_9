@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255)->unique();
             $table->text('image_url');
-            $table->date('published_date');//date型で 年 月 日 が入る
+            $table->date('published_date');//date型で 年 月 日
             $table->boolean('is_showing');
             $table->text('description');
             $table->timestamps();

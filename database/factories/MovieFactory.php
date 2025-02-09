@@ -16,8 +16,16 @@ class MovieFactory extends Factory
      */
     public function definition(): array
     {
+        static $count = 1;
+
         return [
-            //
+            'id' => $count++,
+            'title' => $this->faker->unique()->word,
+            'image_url' => $this->faker->imageUrl(),
+            'published_date' => $this->faker->date(),
+            'is_showing' => $this->faker->boolean,
+            'description' => $this->faker->realText(20),
         ];
     }
 }
+

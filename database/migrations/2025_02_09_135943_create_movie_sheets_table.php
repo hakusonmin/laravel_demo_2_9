@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('movie_id')->constrained();
             $table->foreignId('sheet_id')->constrained();
-            $table->datetime('schedule');
+            $table->dateTime('start_datetime');
+            $table->dateTime('end_datetime');
             $table->unsignedInteger('price');
             $table->boolean('is_reserved');
             $table->timestamps();
