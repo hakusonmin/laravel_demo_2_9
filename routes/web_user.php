@@ -71,3 +71,4 @@ Route::middleware('auth')->group(function () {
       // ここからverifiedなルートを追加可能
     });
 });
+

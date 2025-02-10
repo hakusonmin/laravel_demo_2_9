@@ -9,9 +9,11 @@ use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredAdminController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\MovieController;
 
 Route::middleware('guest:admin')->group(function () {
     Route::get('register', [RegisteredAdminController::class, 'create'])
@@ -73,3 +75,9 @@ Route::middleware('auth:admin')->group(function () {
         // ここからverifiedなルートを追加可能
     });
 });
+
+Route::resource('movies', AdminMovieController::class)
+->middleware('auth:admin');
+
+
+
