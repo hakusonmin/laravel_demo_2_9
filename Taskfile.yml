@@ -14,6 +14,6 @@ tasks:
     cmds:
       - php artisan migrate:fresh --seed
 
-  dump:
+  dump: #ディレクトリを手動でいじった場合に必要
     cmds:
       - composer dump-autoload
