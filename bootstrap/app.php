@@ -19,7 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
               : route('user.login');
         });
 
-        // エイリアスとして追加
+        // カスタムミドルウェアを作ったのでdefaultAliases()のgusetのエイリアスをここで上書きしています。
         $middleware->alias([       
           'guest' => \App\Http\Middleware\CustomRedirectIfAuthenticated::class,
         ]);

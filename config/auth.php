@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+        'guard' => env('AUTH_GUARD', 'web'),//この記法ではデフォルトがwebになる(つまり基本的にはwebでAUTH_GUARDを設定した時だけそのenvの値になる)
+        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),//↑と同じ
     ],
 
     /*
@@ -37,7 +37,7 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver' => 'session',//ログイン認証の手法を定義(MPAはログインの認証状態をsessionで管理する)(ちなみにAPI認証の場合はtokenを使う)
             'provider' => 'users',
         ],
         'admin' => [
@@ -73,10 +73,6 @@ return [
           'driver' => 'eloquent',
           'model' => App\Models\Admin::class,
         ],
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
 
     /*
