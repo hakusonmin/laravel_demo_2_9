@@ -1,0 +1,55 @@
+.wrapper {
+  max-width: 960px;
+  margin: 3dvw auto 0 auto;
+  text-align: center;
+  padding: 4dvw;
+}
+
+body{
+  background-color: rgb(39, 22, 5);
+}
+
+.wrapper-title {
+  color: bisque;
+  font-size: 30px;
+}
+
+.card-container {
+  display: grid;
+  gap: 1.5dvw;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+button{
+  background-color: bisque;
+  border: 3px solid black;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 5px;
+  padding: 23px;
+  background-color: bisque;
+  border: 6px solid black;
+}
+
+/* .cardにある.card-titleに対する操作です(複数に当てる倍は,で区切るよ.) */
+.card .card-title { 
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.card .image {
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  border: 6px solid black;
+}

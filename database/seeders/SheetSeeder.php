@@ -47,6 +47,11 @@ class SheetSeeder extends Seeder
             'id' => 7,
             'title' => 'A-7',
             'hall_id' => 1,
+          ],
+          [
+            'id' => 8,
+            'title' => 'A-8',
+            'hall_id' => 1,
           ]
         ]);
     }

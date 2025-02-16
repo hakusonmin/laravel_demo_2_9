@@ -25,7 +25,19 @@ class HallSeeder extends Seeder
         [
           'id' => 3,
           'title' => 'C',
+        ],
+        [
+          'id' => 4,
+          'title' => 'D',
+        ],
+        [
+          'id' => 5,
+          'title' => 'E',
+        ],
+        [
+          'id' => 6,
+          'title' => 'F',
         ]
-        ]);
+      ]);
     }
 }

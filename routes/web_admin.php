@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredAdminController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\Admin\HallController as AdminHallController;
 use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 use Illuminate\Support\Facades\Route;
 
@@ -79,4 +80,7 @@ Route::middleware('auth:admin')->group(function () {
 });
 
 Route::resource('movies', AdminMovieController::class)
+->middleware('auth:admin');
+
+Route::resource('halls', AdminHallController::class)
 ->middleware('auth:admin');

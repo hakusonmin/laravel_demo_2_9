@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie</title>
-    <link rel="stylesheet" href="{{ asset('./css/list.css') }}">
+    <link rel="stylesheet" href="{{ asset('./css/admin/hall/index.css') }}">
 </head>
 <body>
   <div class="wrapper">
-    <h2 class="wrapper-title">映画一覧</h2>
+    <h2 class="wrapper-title">ホール一覧</h2>
     <div class="card-container">
-        @foreach ($sheets as $sheet)
+        @foreach ($halls as $hall)
             <div class="card">
                 <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
                 <div class="card-title">{{ $hall->title }}</div>
