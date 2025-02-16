@@ -1,16 +1,22 @@
 /* ラッパーは角丸していいけどグリッドの中身のカードは丸くない方がいい */
-
 .wrapper {
   max-width: 960px;
   margin: 3dvw auto 0 auto;
   text-align: center;
-  border: 2px solid black;
-  border-radius: 30px;
   padding: 4dvw;
 }
 
+.hoge{
+  color: bisque;
+}
+
 body{
-  background-color: blanchedalmond;
+  background-color: rgb(39, 22, 5);
+}
+
+.wrapper-title {
+  color: bisque;
+  font-size: 30px;
 }
 
 .card-container {
@@ -20,25 +26,21 @@ body{
 }
 
 button{
-    background-color: blanchedalmond;
+    background-color: bisque;
 }
-
 
 .card {
   display: grid;
   grid-row: span 3;
   grid-template-rows: subgrid;
   row-gap: 12px;
-  border: 2px solid black;
-}
-
-.card-container {
-  width: 100%;
-  margin-inline: auto;
+  padding: 23px;
+  background-color: bisque;
+  border: 6px solid black;
 }
 
 .card .card-title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600px;
   text-align: center;
   align-self: center;
@@ -51,4 +53,6 @@ button{
 }
 
 
-
+.image{
+  border: 6px solid black;
+}
