@@ -79,4 +79,4 @@ Route::middleware('auth:admin')->group(function () {
 });
 
 Route::resource('movies', AdminMovieController::class)
-->middleware('auth:admin')->except(['show']);
+->middleware('auth:admin');
