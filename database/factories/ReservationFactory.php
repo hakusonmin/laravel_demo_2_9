@@ -19,10 +19,11 @@ class ReservationFactory extends Factory
     public function definition(): array
     {
         static $count = 1;
+        static $count2 = 1;
 
         return [
             'id' => $count++,
-            'user_id' => User::factory(),
+            'user_id' => $count2++,
             'movie_sheet_id' => MovieSheet::factory(),
         ];
     }
