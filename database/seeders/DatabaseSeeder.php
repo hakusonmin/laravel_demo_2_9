@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {        
-      Reservation::factory(10)->create();
+      $this->call([
+        HallSeeder::class,
+        SheetSeeder::class
+      ]);
+      Reservation::factory(8)->create();
     }
 }

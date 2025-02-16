@@ -19,8 +19,7 @@ class HallFactory extends Factory
         static $count = 1;
 
         return [
-            'id' => $count++,
-            'title' => 'Aホール',
+          //
         ];
     }
 }

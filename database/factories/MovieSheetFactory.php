@@ -19,6 +19,7 @@ class MovieSheetFactory extends Factory
     public function definition(): array
     {
         static $count = 1;
+        static $count2 = 1;
 
         return [
             'id' => $count++,
@@ -27,7 +28,7 @@ class MovieSheetFactory extends Factory
             'price' => $this->faker->randomNumber,
             'is_reserved' => $this->faker->boolean,
             'movie_id' => Movie::factory(),
-            'sheet_id' => Sheet::factory(),
+            'sheet_id' => $count2++,
         ];
     }
 }

@@ -20,9 +20,7 @@ class SheetFactory extends Factory
         static $count = 1;
 
         return [
-          'id' => $count++,
-          'title' => 'A-1',
-          'hall_id' => Hall::factory(),
+          //
         ];
     }
 }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Hall;
 use Illuminate\Http\Request;
+
 
 class HallController extends Controller
 {
@@ -12,7 +14,8 @@ class HallController extends Controller
      */
     public function index()
     {
-        //
+      $halls = Hall::all();
+      return view('web.admin.hall.index', compact('halls'));
     }
 
     /**

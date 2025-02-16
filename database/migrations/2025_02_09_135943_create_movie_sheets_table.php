@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('movie_sheets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('movie_id')->constrained();
-            $table->foreignId('sheet_id')->constrained();
+            $table->foreignId('movie_id');
+            $table->foreignId('sheet_id');
             $table->dateTime('start_datetime');
             $table->dateTime('end_datetime');
             $table->unsignedInteger('price');
