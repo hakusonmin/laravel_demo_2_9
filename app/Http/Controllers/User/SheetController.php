@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
-use App\Http\Requests\StoreSheetRequest;
-use App\Http\Requests\UpdateSheetRequest;
-use App\Models\Sheet;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class SheetController extends Controller
 {
@@ -27,7 +26,7 @@ class SheetController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSheetRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class SheetController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Sheet $sheet)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +42,7 @@ class SheetController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sheet $sheet)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +50,7 @@ class SheetController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSheetRequest $request, Sheet $sheet)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +58,7 @@ class SheetController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sheet $sheet)
+    public function destroy(string $id)
     {
         //
     }

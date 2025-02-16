@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\MovieController;
+use App\Models\Movie;
 
+//↓ここ guestのミドルウェアのエイリアスです
 Route::middleware('guest:admin')->group(function () {
     Route::get('register', [RegisteredAdminController::class, 'create'])
                 ->name('register');
@@ -77,7 +79,4 @@ Route::middleware('auth:admin')->group(function () {
 });
 
 Route::resource('movies', AdminMovieController::class)
-->middleware('auth:admin');
-
-
-
+->middleware('auth:admin')->except(['show']);

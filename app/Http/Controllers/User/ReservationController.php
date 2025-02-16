@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
-use App\Http\Requests\StoreHallRequest;
-use App\Http\Requests\UpdateHallRequest;
-use App\Models\Hall;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class HallController extends Controller
+class ReservationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class HallController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreHallRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class HallController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Hall $hall)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +42,7 @@ class HallController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Hall $hall)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +50,7 @@ class HallController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateHallRequest $request, Hall $hall)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +58,7 @@ class HallController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Hall $hall)
+    public function destroy(string $id)
     {
         //
     }

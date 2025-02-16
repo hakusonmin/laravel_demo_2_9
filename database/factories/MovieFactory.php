@@ -21,7 +21,7 @@ class MovieFactory extends Factory
         return [
             'id' => $count++,
             'title' => $this->faker->unique()->word,
-            'image_url' => $this->faker->imageUrl(),
+            'image_url' => 'speaker.jpeg',
             'published_date' => $this->faker->date(),
             'is_showing' => $this->faker->boolean,
             'description' => $this->faker->realText(20),

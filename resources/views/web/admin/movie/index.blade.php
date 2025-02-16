@@ -5,31 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie</title>
-    <link rel="stylesheet" href="{{ asset('./css/admin/movie/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('./css/list.css') }}">
 </head>
 <body>
-    <table border="1">
-      <thead>
-      <tr>
-        <th>映画タイトル</th>
-        <th>画像URL</th>
-        <th>公開日</th>
-        <th>概要</th>
-        <th>上映中かどうか</th>
-      </tr>
-      </thead>
-      <tbody>
-            @foreach ($movies as $movie)
-                <tr>
-                    <th>{{ $movie->title }}</th>
-                    <td>{{ $movie->image_url }} </td>
-                    <td>{{ $movie->published_date }}</td>
-                    <td>{{ $movie->description }}</td>
-                    <td>{{ $movie->is_showing ? '上映中' : '上映予定' }}</td>
-                </tr>
-            @endforeach
-      </tbody>
-    </table>
+  <div class="wrapper">
+    <div class="card-container">
+        @foreach ($movies as $movie)
+            <div class="card">
+                <h2 class="card-title">{{ $movie->title }}</h2>
+                <img class="image" src="{{ asset('./../storage/img/' . $movie->image_url )}}">
+                <button>詳細画面に行く</button>
+            </div>
+        @endforeach
+    </div>
+  </div>
 
     @if (session('message'))
       <div class="alert alert-danger">

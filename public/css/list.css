@@ -1,0 +1,54 @@
+/* ラッパーは角丸していいけどグリッドの中身のカードは丸くない方がいい */
+
+.wrapper {
+  max-width: 960px;
+  margin: 3dvw auto 0 auto;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 4dvw;
+}
+
+body{
+  background-color: blanchedalmond;
+}
+
+.card-container {
+  display: grid;
+  gap: 1.5dvw;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+button{
+    background-color: blanchedalmond;
+}
+
+
+.card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 12px;
+  border: 2px solid black;
+}
+
+.card-container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.card .card-title {
+  font-size: 19px;
+  font-weight: 600px;
+  text-align: center;
+  align-self: center;
+}
+
+.card .image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+
+
