@@ -79,8 +79,10 @@ Route::middleware('auth:admin')->group(function () {
     });
 });
 
-Route::resource('movies', AdminMovieController::class)
-->middleware('auth:admin');
+Route::name('web.')->group(function () {
+  Route::resource('movies', AdminMovieController::class)
+        ->middleware('auth:admin');
+});
 
 Route::resource('halls', AdminHallController::class)
 ->middleware('auth:admin');

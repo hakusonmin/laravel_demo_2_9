@@ -32,7 +32,15 @@ class MovieController extends Controller
    */
   public function store(StoreMovieRequest $request)
   {
-    //
+    $model = new Movie();
+    $model->title = $request->title;
+    $model->image_url = $request->image_url;
+    $model->published_date = $request->published_date;
+    $model->is_showing = $request->is_showing;
+    $model->description = $request->description;
+    $model->save();
+
+    return redirect()->route('web.admin.movies.index');
   }
 
   /**

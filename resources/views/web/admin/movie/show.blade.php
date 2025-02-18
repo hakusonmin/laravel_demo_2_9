@@ -35,9 +35,8 @@
               <div class="form-element-wrapper-title"><label for="description">概要</label></div>
               <div class="form-element-wrapper-content-textarea">「{{ $movie->description }}」</div>
             </div>
-              
-              <!-- 送信ボタン -->
-              <button type="submit">送信</button>
+
+            <button type="submit">一覧に戻る</button>
         </form>
 
         @if ($errors->any())
