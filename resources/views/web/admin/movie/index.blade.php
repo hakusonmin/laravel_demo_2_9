@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie</title>
-    <link rel="stylesheet" href="{{ asset('./css/list.css') }}">
+    <link rel="stylesheet" href="{{ asset('./css/admin/movie/index.css') }}">
 </head>
 <body>
   <div class="wrapper">
@@ -14,7 +14,7 @@
         @foreach ($movies as $movie)
             <div class="card">
                 <img class="image" src="{{ asset('./../storage/img/' . $movie->image_url )}}">
-                <div class="card-title">{{ $movie->title }}</div>
+                <div class="card-title">「{{ $movie->title }}」</div>
                 <button>詳細を確認</button>
             </div>
         @endforeach

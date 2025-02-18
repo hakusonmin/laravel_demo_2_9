@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie</title>
-    <link rel="stylesheet" href="{{ asset('css/utils.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
+    <link rel="stylesheet" href="{{ asset('./css/admin/movie/show.css') }}">
 </head>
 <body>
 
@@ -19,22 +18,22 @@
           @csrf
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title">映画タイトル</div>
-              <div class="form-element-wrapper-content">{{ $movie->title }}</div>
+              <div class="form-element-wrapper-content">「{{ $movie->title }}」</div>
             </div>
             
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="image_url">画像URL</label></div>
-              <div class="form-element-wrapper-content">{{ $movie->image_url}}</div>
+              <div class="form-element-wrapper-content">「{{ $movie->image_url}}」</div>
             </div>
       
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="published_date">公開年</label></div>
-              <div class="form-element-wrapper-content">{{ $movie->published_date }}</div>
+              <div class="form-element-wrapper-content">「{{ $movie->published_date }}」</div>
             </div>
       
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="description">概要</label></div>
-              <div class="form-element-wrapper-content-textarea">{{ $movie->description }}</div>
+              <div class="form-element-wrapper-content-textarea">「{{ $movie->description }}」</div>
             </div>
               
               <!-- 送信ボタン -->

@@ -14,7 +14,7 @@
         @foreach ($halls as $hall)
             <div class="card">
                 <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
-                <div class="card-title">{{ $hall->title }}</div>
+                <div class="card-title">「{{ $hall->title }}」</div>
                 <button>詳細を確認</button>
             </div>
         @endforeach

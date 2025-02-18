@@ -2,8 +2,13 @@
 
 @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 
+:root {
+  --brown: rgb(39, 22, 5);
+  --light-brown: rgb(232, 196, 152);
+}
+
 body{
-  background-color: rgb(39, 22, 5);
+  background-color: var(--brown);
 }
 
 .mimi {
@@ -12,16 +17,18 @@ body{
 }
 
 .form-element-wrapper {
+
   background-color: bisque;
   margin: 20px;
   padding: 20px;
-  border: 7px solid black;
+  box-shadow: inset 0 0 0 6px bisque,  
+              inset 0 0 0 10px var(--brown);
 }
 
 .form-element-wrapper-content,.form-element-wrapper-content-textarea {
   color: rgb(39, 22, 5);
-  background-color: rgb(232, 196, 152);
-  border: 4px solid rgb(39, 22, 5);
+  background-color: var(--light-brown);
+  border: 8px double var(--brown);
   margin: 10px auto 0 auto;
   height: 35px;
   width: 75%;
@@ -33,14 +40,14 @@ body{
 
 .form-element-wrapper-title{
   margin-bottom: 10px;
-  background-color: rgb(39, 22, 5);
+  background-color: var(--brown);
   color: bisque;
   width: 50%;
   margin: 0 auto;
 }
 
   .wrapper {
-    color: black;
+    color: var(--brown);
     font-weight: 1000;
     font-size: 20px;
     max-width: 550px;
@@ -49,7 +56,7 @@ body{
   }
 
   input,textarea {
-    border: 4px solid black;
+    border: 4px solid var(--brown);
     height: 30px;
     width: 75%;
   }
@@ -61,9 +68,11 @@ body{
   button {
     margin: 0 auto 20px auto;
     appearance: none;
+    background-color: bisque;
     font-weight: bold;
-    border: 3px solid black;
-    background: bisque;
     padding: 8px 16px;
     font-size: 16px;
+    color: var(--brown);
+    box-shadow: inset 0 0 0 3px bisque,  
+                inset 0 0 0 6px var(--brown);
   }
