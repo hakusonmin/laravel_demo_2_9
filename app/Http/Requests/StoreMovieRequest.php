@@ -25,8 +25,8 @@ class StoreMovieRequest extends FormRequest
           'title' => ['required', 'unique:movies'],
           'image_url' => ['required', 'active_url'],
           'published_date' => 'required',
-          'description' => 'required',
           'is_showing' => 'required',
+          'description' => 'required',
         ];
     }
 }

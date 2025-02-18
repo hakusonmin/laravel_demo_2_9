@@ -40,7 +40,7 @@ class MovieController extends Controller
     $model->description = $request->description;
     $model->save();
 
-    return redirect()->route('web.admin.movies.index');
+    return redirect()->route('admin.movies.index');
   }
 
   /**

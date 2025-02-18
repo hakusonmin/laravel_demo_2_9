@@ -2,6 +2,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
 
+.error-aleart { /*これないとエラーが背景と同化して見えないので困ります*/
+  color: bisque;
+  list-style:none;
+}
+
 :root {
   --brown: rgb(39, 22, 5);
   --light-brown: rgb(232, 196, 152);
@@ -75,4 +80,8 @@ body{
     color: var(--brown);
     box-shadow: inset 0 0 0 3px bisque,  
                 inset 0 0 0 6px var(--brown);
+  }
+
+  input[type=checkbox] {
+    accent-color: rgb(39, 22, 5);
   }
