@@ -13,9 +13,7 @@
 
       <div class="wrapper">
       <h2 class="mimi">映画情報詳細</h2>
-        <!-- 送信先を設定 -->
-        <form >
-          @csrf
+
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title">映画タイトル</div>
               <div class="form-element-wrapper-content">「{{ $movie->title }}」</div>
@@ -37,7 +35,6 @@
             </div>
 
             <button type="submit">一覧に戻る</button>
-        </form>
 
         @if ($errors->any())
           <div class="alert alert-danger">
