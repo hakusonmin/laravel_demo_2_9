@@ -11,30 +11,29 @@
 <body>
 
     <section class="my-wrapper">
-
       <div class="wrapper">
-      <h2 class="mimi">映画情報詳細</h2>
+      <h2 class="mimi">映画情報登録</h2>
         <!-- 送信先を設定 -->
         <form >
           @csrf
             <div class="form-element-wrapper">
-              <div class="form-element-wrapper-title">映画タイトル</div>
-              <div class="form-element-wrapper-content">{{ $movie->title }}</div>
+              <div class="form-element-wrapper-title"><label for="title">映画タイトル</label></div>
+              <div><input type="text" id="title" name="title" required></div>
             </div>
             
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="image_url">画像URL</label></div>
-              <div class="form-element-wrapper-content">{{ $movie->image_url}}</div>
+              <div><input type="url" id="image_url" name="image_url" required></div>
             </div>
       
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="published_date">公開年</label></div>
-              <div class="form-element-wrapper-content">{{ $movie->published_date }}</div>
+              <div><input type="number" id="published_date" name="published_year" required></div>
             </div>
       
             <div class="form-element-wrapper">
               <div class="form-element-wrapper-title"><label for="description">概要</label></div>
-              <div class="form-element-wrapper-content-textarea">{{ $movie->description }}</div>
+              <div><textarea id="description" name="description" required></textarea></div>
             </div>
               
               <!-- 送信ボタン -->

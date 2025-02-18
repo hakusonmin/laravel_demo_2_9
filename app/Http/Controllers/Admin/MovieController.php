@@ -24,7 +24,7 @@ class MovieController extends Controller
    */
   public function create()
   {
-    //
+    return view('web.admin.movie.create');
   }
 
   /**
