@@ -15,7 +15,7 @@
             <div class="card">
                 <img class="image" src="{{ asset('./../storage/img/' . $movie->image_url )}}">
                 <div class="card-title">「{{ $movie->title }}」</div>
-                <button>詳細を確認</button>
+                <button type="button" onclick="location.href='{{ route('admin.movies.show', ['movie'=> $movie->id]) }}'">詳細を確認</button>
             </div>
         @endforeach
     </div>
