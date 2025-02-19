@@ -62,7 +62,7 @@ button{
   border: 6px solid var(--brown);
 }
 
-.back-button{
+.jump-button{
     margin: 0 auto;
     appearance: none;
     background-color: bisque;

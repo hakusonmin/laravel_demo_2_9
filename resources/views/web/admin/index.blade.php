@@ -15,25 +15,25 @@
       <div class="card">
         <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
         <div class="card-title">「映画一覧」</div>
-        <button class="back-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">一覧へ</button>
+        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">一覧へ</button>
       </div>
 
       <div class="card">
         <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
         <div class="card-title">「ホール一覧」</div>
-        <button class="back-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
+        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
       </div>
 
       <div class="card">
         <img class="image" src="{{ asset('./../storage/img/' )}}">
         <div class="card-title">「ユーザー一覧」</div>
-        <button class="back-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
+        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
       </div>
 
       <div class="card">
         <img class="image" src="{{ asset('./../storage/img/' )}}">
         <div class="card-title">「予約一覧」</div>
-        <button class="back-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
+        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
       </div>
 
     </div>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('./css/admin/movie/index.css') }}">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper"
     <h2 class="wrapper-title">映画一覧</h2>
     <div class="card-container">
         @foreach ($movies as $movie)
