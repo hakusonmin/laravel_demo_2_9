@@ -26,15 +26,16 @@ body{
 }
 
 button{
-  background-color: var(--brown);
   color: bisque;
+  background-color: var(--brown);
+  font-weight: bold;
   margin: 0 auto;
   width: 50%;
 }
 
 .card {
   display: grid;
-  grid-row: span 3;
+  grid-row: span 2;
   grid-template-rows: subgrid;
   row-gap: 5px;
   padding: 23px;
@@ -50,6 +51,7 @@ button{
   text-align: center;
   align-self: center;
   box-sizing: border-box;
+  color: var(--brown);
 }
 
 .card .image {

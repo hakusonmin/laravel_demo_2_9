@@ -19,6 +19,7 @@
             </div>
         @endforeach
     </div>
+    <button class="back-button" type="button" onclick="location.href='{{ route('admin.index') }}'">戻る</button>
   </div>
 
     @if (session('message'))

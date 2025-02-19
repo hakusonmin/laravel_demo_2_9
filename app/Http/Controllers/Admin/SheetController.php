@@ -3,10 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Sheet;
 use Illuminate\Http\Request;
 
 class SheetController extends Controller
 {
+
+    public function listByHall(string $id) 
+    {
+    $sheets = Sheet::where('hall_id',$id)->get();
+    return view('web.admin.sheet.list-by-hall', compact('sheets'));
+    }
+
     /**
      * Display a listing of the resource.
      */
