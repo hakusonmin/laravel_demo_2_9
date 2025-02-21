@@ -33,8 +33,9 @@
               <div class="form-element-wrapper-title"><label for="description">概要</label></div>
               <div class="form-element-wrapper-content-textarea">「{{ $movie->description }}」</div>
             </div>
-
-            <button type="submit">一覧に戻る</button>
+            
+            <button class="jump-button" type="button" onclick="location.href='{{ route('admin.movie-sheets.list-by-movie', ['id'=> $movie->id]) }}'">チケットを買う</button>
+            <button class="back-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">戻る</button>
 
         @if ($errors->any())
           <div class="alert alert-danger">

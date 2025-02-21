@@ -1,46 +1,52 @@
-:root {
-  --brown: rgb(39, 22, 5);
-  --light-brown: rgb(232, 196, 152);
+:root{
+  --black :rgb(31, 31, 31)
+}
+
+body{
+  background-color: var(--black);
+}
+
+.content{
+  background-color: rgb(240,235,235);
+  border-right: 8dvw solid var(--black);
+  border-left: 8dvw solid var(--black);
+  padding: 20px;/*このパディングないとちゃんと動きません*/
 }
 
 .wrapper {
   max-width: 960px;
-  margin: 3dvw auto 0 auto;
+  margin: 3dvw auto 3dvw auto;
   text-align: center;
   padding: 4dvw;
-}
-
-body{
-  background-color: var(--brown);
+  background-color:white;
+  box-shadow: 2px 2px 4px var(--black);
 }
 
 .wrapper-title {
-  color: bisque;
+  color: black;
   font-size: 30px;
 }
 
 .card-container {
   display: grid;
   gap: 1.5dvw;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 button{
-  background-color: var(--brown);
-  color: bisque;
+  background-color: var(--black);
+  color: white;
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
 }
 
 .card {
   display: grid;
   grid-row: span 3;
   grid-template-rows: subgrid;
+  padding: 12px;
   row-gap: 5px;
-  padding: 23px;
-  box-shadow: inset 0 0 0 6px bisque,  
-              inset 0 0 0 10px var(--brown);
-  background-color: bisque;
+  box-shadow: 2px 2px 4px black;
 }
 
 /* .cardにある.card-titleに対する操作です(複数に当てる倍は,で区切るよ.) */
@@ -55,20 +61,17 @@ button{
 .card .image {
   box-sizing: border-box;
   width: 100%;
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
-  border: 6px solid var(--brown);
 }
 
 .back-button{
     width: 10%;
     margin: 30px auto 20px auto;
     appearance: none;
-    background-color: bisque;
     font-weight: bold;
     padding: 8px 16px;
     font-size: 16px;
-    color: var(--brown);
-    box-shadow: inset 0 0 0 3px bisque,  
-                inset 0 0 0 6px var(--brown);
+    color: white;
+    background-color: black;
 }

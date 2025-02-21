@@ -3,10 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\MovieSheet;
 use Illuminate\Http\Request;
 
 class MovieSheetController extends Controller
 {
+
+    public function listByMovie(string $id)
+    {
+      $movieSheets = MovieSheet::where('movie_id', $id)->get();
+      return view('web.admin.movie-sheet.list-by-movie', compact('movieSheets'));
+    }
+    
     /**
      * Display a listing of the resource.
      */

@@ -1,0 +1,53 @@
+:root{
+  --black :rgb(31, 31, 31)
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  max-width:960px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 4%;
+  height: 120px;
+  background-color: var(--black);
+}
+
+header h1 a{
+  color: white;
+}
+
+header ul {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+header ul li {
+  font-size: 1.1rem;
+  margin-left: 30px;
+}
+
+header ul li a {
+  color: white;
+}
+
+footer{
+  height: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .site-title {
+  margin-top: 20px;
+}
+
+  header {
+  flex-direction: column;
+  height: auto;
+  }
+
+}

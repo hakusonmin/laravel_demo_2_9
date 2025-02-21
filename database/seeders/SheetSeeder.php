@@ -14,7 +14,8 @@ class SheetSeeder extends Seeder
     public function run(): void
     {
         DB::table('sheets')->insert([
-          [ 'id' => 1,
+          [ 
+            'id' => 1,
             'title' => 'A-1',
             'hall_id' => 1,
           ],

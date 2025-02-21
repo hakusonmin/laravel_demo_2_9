@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\HallController as AdminHallController;
 use App\Http\Controllers\Admin\MovieController as AdminMovieController;
+use App\Http\Controllers\Admin\MovieSheetController;
 use App\Http\Controllers\Admin\SheetController;
+use App\Models\MovieSheet;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +16,7 @@ Route::resource('halls', AdminHallController::class)
 
 Route::middleware('auth:admin')->get('/{id}/list-by-hall',[SheetController::class, 'listByHall'])->name('sheets.list-by-hall');
 
-
-Route::middleware('auth:admin')->get('/')->name('/');
+Route::middleware('auth:admin')->get('/{id}/list-by-movie', [MovieSheetController::class, 'listByMovie'])->name('movie-sheets.list-by-movie');
 
 //管理者ダッシュボードへのルーティング
 Route::get('/', function () {
