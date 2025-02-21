@@ -1,17 +1,17 @@
 :root{
-  --black :rgb(31, 31, 31);
-  --light-gray: rgb(240,235,235);
+  --black :rgb(67,67,67);
+  --light-gray: rgb(233,229,222);
   --white: rgb(255,255,255);
+  --font-black: rgb(87, 87, 87);
 }
 
 body{
   background-color: var(--black);
+  margin: 0; /*超大事*/
 }
 
 .content{
   background-color: var(--light-gray);
-  border-right: 8dvw solid var(--black);
-  border-left: 8dvw solid var(--black);
   padding: 20px;/*このパディングないとちゃんと動きません*/
 }
 
@@ -20,13 +20,12 @@ body{
   margin: 3dvw auto 3dvw auto;
   text-align: center;
   padding: 4dvw;
-  background-color:var(--white);
-  box-shadow: 2px 2px 4px var(--black);
 }
 
 .wrapper-title {
-  color: var(--black);
-  font-size: 30px;
+  color: var(--font-black);
+  font-size: 28px;
+  font-weight: 150;
 }
 
 .card-container {
@@ -35,29 +34,22 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-button{
-  background-color: var(--black);
-  color: var(--white);
-  margin: 0 auto;
-  width: 40%;
-}
-
 .card {
+  border: 1px solid rgb(130, 130, 130);
   display: grid;
-  grid-row: span 3;
+  grid-row: span 2;
   grid-template-rows: subgrid;
-  padding: 12px;
   row-gap: 5px;
+  background-color: var(--white);
   box-shadow: 2px 2px 4px var(--black);
 }
 
 /* .cardにある.card-titleに対する操作です(複数に当てる倍は,で区切るよ.) */
 .card .card-title { 
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  align-self: center;
-  box-sizing: border-box;
+  font-size: 16px;
+  text-align:left;
+  color: var(--font-black);
+  margin: 0 30px 0px 14px;
 }
 
 .card .image {
@@ -68,12 +60,11 @@ button{
 }
 
 .back-button{
-    width: 10%;
+    width: 8%;
     margin: 30px auto 20px auto;
     appearance: none;
-    font-weight: bold;
     padding: 8px 16px;
-    font-size: 16px;
+    font-weight: 150;
     color: var(--white);
     background-color: var(--black);
 }

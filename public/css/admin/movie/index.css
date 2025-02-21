@@ -2,6 +2,7 @@
   --black :rgb(67,67,67);
   --light-gray: rgb(233,229,222);
   --white: rgb(255,255,255);
+  --font-black: rgb(87, 87, 87);
 }
 
 body{
@@ -22,21 +23,15 @@ body{
 }
 
 .wrapper-title {
-  color: var(--black);
-  font-size: 30px;
+  color: var(--font-black);
+  font-size: 28px;
+  font-weight: 150;
 }
 
 .card-container {
   display: grid;
   gap: 1.5dvw;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-button{
-  background-color: var(--black);
-  color: var(--white);
-  margin: 0 auto;
-  width: 40%;
 }
 
 .card {
@@ -53,8 +48,8 @@ button{
 .card .card-title { 
   font-size: 16px;
   text-align:left;
-  color: rgb(87, 87, 87);
-  margin: 0 30px 10px 14px;
+  color: var(--font-black);
+  margin: 0 30px 0px 14px;
 }
 
 .card .image {
@@ -65,12 +60,11 @@ button{
 }
 
 .back-button{
-    width: 10%;
+    width: 8%;
     margin: 30px auto 20px auto;
     appearance: none;
-    font-weight: bold;
     padding: 8px 16px;
-    font-size: 16px;
+    font-weight: 150;
     color: var(--white);
     background-color: var(--black);
 }

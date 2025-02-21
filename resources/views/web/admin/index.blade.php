@@ -8,35 +8,44 @@
   <link rel="stylesheet" href="{{ asset('./css/admin/index.css') }}">
 </head>
 <body>
-  <div class="wrapper">
-    <h2 class="wrapper-title">「管理者ルートページ」</h2>
-    <div class="card-container">
-
-      <div class="card">
-        <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
-        <div class="card-title">「映画一覧」</div>
-        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">一覧へ</button>
+  @extends('layouts.layouts')
+  @section('content')
+  <section class="content">
+    <div class="wrapper">
+      <h2 class="wrapper-title">管理者ルートページ</h2>
+      <div class="card-container">
+  
+        <div class="card">
+          <a href="{{ route('admin.movies.index') }}">
+            <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
+            <div class="card-title">「映画一覧」</div>
+          </a>
+        </div>
+  
+        <div class="card">
+          <a href="{{ route('admin.halls.index') }}">
+            <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
+            <div class="card-title">「ホール一覧」</div>
+          </a>
+        </div>
+  
+        <div class="card">
+          <a href="{{ route('admin.halls.index') }}">
+            <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
+            <div class="card-title">「ユーザー一覧」</div>
+          </a>
+        </div>
+  
+        <div class="card">
+          <a href="{{ route('admin.halls.index') }}">
+            <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
+            <div class="card-title">「予約一覧」</div>
+          </a>
+        </div>
+  
       </div>
-
-      <div class="card">
-        <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
-        <div class="card-title">「ホール一覧」</div>
-        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
-      </div>
-
-      <div class="card">
-        <img class="image" src="{{ asset('./../storage/img/' )}}">
-        <div class="card-title">「ユーザー一覧」</div>
-        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
-      </div>
-
-      <div class="card">
-        <img class="image" src="{{ asset('./../storage/img/' )}}">
-        <div class="card-title">「予約一覧」</div>
-        <button class="jump-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">一覧へ</button>
-      </div>
-
     </div>
-  </div>
+  </section>
+  @endsection
 </body>
 </html>

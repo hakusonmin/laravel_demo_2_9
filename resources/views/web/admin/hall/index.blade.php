@@ -16,9 +16,10 @@
           <div class="card-container">
               @foreach ($halls as $hall)
                   <div class="card">
-                      <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
-                      <div class="card-title">「{{ $hall->title }}」</div>
-                      <button type="button" onclick="location.href='{{ route('admin.sheets.list-by-hall', ['id'=> $hall->id]) }}'">席一覧へ</button>
+                    <a href="{{ route('admin.sheets.list-by-hall', ['id'=> $hall->id]) }}">
+                      <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
+                      <div class="card-title">{{ $hall->title }}</div>
+                    </a>
                   </div>
               @endforeach
                 </div>

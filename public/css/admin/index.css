@@ -1,75 +1,70 @@
-:root {
-  --brown: rgb(39, 22, 5);
-  --light-brown: rgb(232, 196, 152);
+:root{
+  --black :rgb(67,67,67);
+  --light-gray: rgb(233,229,222);
+  --white: rgb(255,255,255);
+  --font-black: rgb(87, 87, 87);
+}
+
+body{
+  background-color: var(--black);
+  margin: 0; /*超大事*/
+}
+
+.content{
+  background-color: var(--light-gray);
+  padding: 20px;/*このパディングないとちゃんと動きません*/
 }
 
 .wrapper {
   max-width: 960px;
-  margin: 3dvw auto 0 auto;
+  margin: 3dvw auto 3dvw auto;
   text-align: center;
   padding: 4dvw;
 }
 
-body{
-  background-color: var(--brown);
-}
-
 .wrapper-title {
-  color: bisque;
-  font-size: 30px;
+  color: var(--font-black);
+  font-size: 28px;
+  font-weight: 150;
 }
 
 .card-container {
   display: grid;
   gap: 1.5dvw;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-button{
-  color: bisque;
-  background-color: var(--brown);
-  font-weight: bold;
-  margin: 0 auto;
-  width: 50%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .card {
+  border: 1px solid rgb(130, 130, 130);
   display: grid;
-  grid-row: span 3;
+  grid-row: span 2;
   grid-template-rows: subgrid;
   row-gap: 5px;
-  padding: 23px;
-  box-shadow: inset 0 0 0 6px bisque,  
-              inset 0 0 0 10px var(--brown);
-  background-color: bisque;
+  background-color: var(--white);
+  box-shadow: 2px 2px 4px var(--black);
 }
 
 /* .cardにある.card-titleに対する操作です(複数に当てる倍は,で区切るよ.) */
 .card .card-title { 
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  align-self: center;
-  box-sizing: border-box;
-  color: var(--brown);
+  font-size: 16px;
+  text-align:left;
+  color: var(--font-black);
+  margin: 0 30px 0px 14px;
 }
 
 .card .image {
   box-sizing: border-box;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
-  border: 6px solid var(--brown);
 }
 
-.jump-button{
-    margin: 0 auto;
+.back-button{
+    width: 8%;
+    margin: 30px auto 20px auto;
     appearance: none;
-    background-color: bisque;
-    font-weight: bold;
     padding: 8px 16px;
-    font-size: 16px;
-    color: var(--brown);
-    box-shadow: inset 0 0 0 3px bisque,  
-                inset 0 0 0 6px var(--brown);
+    font-weight: 150;
+    color: var(--white);
+    background-color: var(--black);
 }
