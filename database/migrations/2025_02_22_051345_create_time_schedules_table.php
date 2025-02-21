@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('time_schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('date_schedule_id');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->timestamps();
         });
     }

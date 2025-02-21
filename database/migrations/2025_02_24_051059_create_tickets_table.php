@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('time_schedule_id');
+            $table->foreignId('sheet_id');
+            $table->unsignedInteger('price');
+            $table->boolean('is_reserved');
             $table->timestamps();
         });
     }

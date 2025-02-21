@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('date_schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('movie_id');
+            $table->date('date');
             $table->timestamps();
         });
     }
