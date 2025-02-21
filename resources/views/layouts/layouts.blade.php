@@ -4,9 +4,9 @@
 </head>
 <body>
   <header>
-    <h1 class="site-title">
+    <h2 class="site-title">
       <a href="{{ route('admin.index') }}'">映画館サイト</a> 
-    </h1>
+    </h2>
     <nav>
       <ul>
         <li><a href="{{ route('admin.index') }}">管理画面へ</a></li>
@@ -15,8 +15,10 @@
       </ul>
     </nav>
   </header>
+  <div class="line"></div>
     @yield('content')
+  <div class="line"></div>
   <footer>
 
-  </footer>>
+  </footer>
 </body>

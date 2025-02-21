@@ -1,5 +1,5 @@
 :root{
-  --black :rgb(31, 31, 31)
+  --black :rgb(67,67,67)
 }
 
 a {
@@ -17,8 +17,14 @@ header {
   background-color: var(--black);
 }
 
-header h1 a{
-  color: white;
+.line {
+  height: 40px;
+  background-color: rgb(129, 129, 129);
+}
+
+header h2 a{
+  color: rgb(195,195,195);
+  font-weight: 100;
 }
 
 header ul {
@@ -30,10 +36,11 @@ header ul {
 header ul li {
   font-size: 1.1rem;
   margin-left: 30px;
+  list-style: none;
 }
 
 header ul li a {
-  color: white;
+  color: rgb(195,195,195);
 }
 
 footer{
@@ -49,5 +56,4 @@ footer{
   flex-direction: column;
   height: auto;
   }
-
 }
