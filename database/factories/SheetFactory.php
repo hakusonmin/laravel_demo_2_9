@@ -17,8 +17,6 @@ class SheetFactory extends Factory
      */
     public function definition(): array
     {
-        static $count = 1;
-
         return [
           //
         ];

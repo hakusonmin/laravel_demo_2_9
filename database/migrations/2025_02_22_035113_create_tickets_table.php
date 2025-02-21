@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('movie_sheets', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('movie_id');
-            $table->foreignId('sheet_id');
-            $table->dateTime('start_datetime');
-            $table->dateTime('end_datetime');
+            $table->foreignId('schedule_id');
             $table->unsignedInteger('price');
             $table->boolean('is_reserved');
             $table->timestamps();
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('movie_sheets');
+        Schema::dropIfExists('tickets');
     }
 };

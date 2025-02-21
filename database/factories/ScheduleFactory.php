@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Hall>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\schedule>
  */
-class HallFactory extends Factory
+class ScheduleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class HallFactory extends Factory
     public function definition(): array
     {
         return [
-          //
+            //
         ];
     }
 }

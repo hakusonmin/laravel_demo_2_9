@@ -16,8 +16,6 @@ Route::resource('halls', AdminHallController::class)
 
 Route::middleware('auth:admin')->get('/{id}/list-by-hall',[SheetController::class, 'listByHall'])->name('sheets.list-by-hall');
 
-Route::middleware('auth:admin')->get('/{id}/list-by-movie', [MovieSheetController::class, 'listByMovie'])->name('movie-sheets.list-by-movie');
-
 //管理者ダッシュボードへのルーティング
 Route::get('/', function () {
   return view('web.admin.index'); //↓ここadmin.indexにしないように注意prefixあるからね..

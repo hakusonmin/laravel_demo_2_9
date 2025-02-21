@@ -1,20 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\MovieSheet;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreticketRequest;
+use App\Http\Requests\UpdateticketRequest;
+use App\Models\ticket;
 
-class MovieSheetController extends Controller
+class TicketController extends Controller
 {
-
-    public function listByMovie(string $id)
-    {
-      $movieSheets = MovieSheet::where('movie_id', $id)->get();
-      return view('web.admin.movie-sheet.list-by-movie', compact('movieSheets'));
-    }
-    
     /**
      * Display a listing of the resource.
      */
@@ -34,7 +27,7 @@ class MovieSheetController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreticketRequest $request)
     {
         //
     }
@@ -42,7 +35,7 @@ class MovieSheetController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(ticket $ticket)
     {
         //
     }
@@ -50,7 +43,7 @@ class MovieSheetController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(ticket $ticket)
     {
         //
     }
@@ -58,7 +51,7 @@ class MovieSheetController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateticketRequest $request, ticket $ticket)
     {
         //
     }
@@ -66,7 +59,7 @@ class MovieSheetController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(ticket $ticket)
     {
         //
     }
