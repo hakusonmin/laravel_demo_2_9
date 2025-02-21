@@ -1,5 +1,7 @@
 :root{
-  --black :rgb(31, 31, 31)
+  --black :rgb(31, 31, 31);
+  --light-gray: rgb(240,235,235);
+  --white: rgb(255,255,255);
 }
 
 body{
@@ -7,7 +9,7 @@ body{
 }
 
 .content{
-  background-color: rgb(240,235,235);
+  background-color: var(--light-gray);
   border-right: 8dvw solid var(--black);
   border-left: 8dvw solid var(--black);
   padding: 20px;/*このパディングないとちゃんと動きません*/
@@ -18,12 +20,12 @@ body{
   margin: 3dvw auto 3dvw auto;
   text-align: center;
   padding: 4dvw;
-  background-color:white;
+  background-color:var(--white);
   box-shadow: 2px 2px 4px var(--black);
 }
 
 .wrapper-title {
-  color: black;
+  color: var(--black);
   font-size: 30px;
 }
 
@@ -35,7 +37,7 @@ body{
 
 button{
   background-color: var(--black);
-  color: white;
+  color: var(--white);
   margin: 0 auto;
   width: 40%;
 }
@@ -46,7 +48,7 @@ button{
   grid-template-rows: subgrid;
   padding: 12px;
   row-gap: 5px;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px var(--black);
 }
 
 /* .cardにある.card-titleに対する操作です(複数に当てる倍は,で区切るよ.) */
@@ -72,6 +74,6 @@ button{
     font-weight: bold;
     padding: 8px 16px;
     font-size: 16px;
-    color: white;
-    background-color: black;
+    color: var(--white);
+    background-color: var(--black);
 }
