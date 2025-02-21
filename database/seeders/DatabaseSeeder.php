@@ -17,8 +17,12 @@ class DatabaseSeeder extends Seeder
         AdminSeeder::class,
         UserSeeder::class,
         HallSeeder::class,
-        SheetSeeder::class
+        SheetSeeder::class,
+        MovieSeeder::class,
+        DateScheduleSeeder::class,
+        TimeScheduleSeeder::class,
+        TicketSeeder::class,
+        ReservationSeeder::class,
       ]);
-      Reservation::factory(8)->create();
     }
 }
