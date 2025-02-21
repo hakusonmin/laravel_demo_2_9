@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MovieSheet extends Model
+class DateSchedule extends Model
 {
-    /** @use HasFactory<\Database\Factories\MovieSheetFactory> */
+    /** @use HasFactory<\Database\Factories\DateScheduleFactory> */
     use HasFactory;
 }

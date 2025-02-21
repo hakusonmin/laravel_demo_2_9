@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreTimeScheduleRequest;
+use App\Http\Requests\UpdateTimeScheduleRequest;
+use App\Models\TimeSchedule;
 
-class ScheduleController extends Controller
+class TimeScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class ScheduleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreTimeScheduleRequest $request)
     {
         //
     }
@@ -34,7 +35,7 @@ class ScheduleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(TimeSchedule $timeSchedule)
     {
         //
     }
@@ -42,7 +43,7 @@ class ScheduleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(TimeSchedule $timeSchedule)
     {
         //
     }
@@ -50,7 +51,7 @@ class ScheduleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateTimeScheduleRequest $request, TimeSchedule $timeSchedule)
     {
         //
     }
@@ -58,7 +59,7 @@ class ScheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(TimeSchedule $timeSchedule)
     {
         //
     }

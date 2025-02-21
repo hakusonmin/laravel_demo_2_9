@@ -24,7 +24,7 @@ class ReservationFactory extends Factory
         return [
             'id' => $count++,
             'user_id' => $count2++,
-            'movie_sheet_id' => MovieSheet::factory(),
+            //'movie_sheet_id' => MovieSheet::factory(),
         ];
     }
 }
