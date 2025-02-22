@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DateScheduleController;
 use App\Http\Controllers\Admin\HallController as AdminHallController;
 use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 use App\Http\Controllers\Admin\MovieSheetController;
@@ -15,6 +16,9 @@ Route::resource('halls', AdminHallController::class)
 ->middleware('auth:admin');
 
 Route::middleware('auth:admin')->get('/{id}/list-by-hall',[SheetController::class, 'listByHall'])->name('sheets.list-by-hall');
+
+Route::middleware('auth:admin')->get('/{id}/date-schedules', [DateScheduleController::class, 'index'])->name('date_schedules.index');
+
 
 //管理者ダッシュボードへのルーティング
 Route::get('/', function () {

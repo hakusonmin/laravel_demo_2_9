@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\DateSchedule;
 use Illuminate\Http\Request;
 
 class DateScheduleController extends Controller
@@ -10,9 +11,10 @@ class DateScheduleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $id)
     {
-        //
+      $dateSchedules = DateSchedule::where('movie_id', $id)->get();
+      return view('web.admin.date_schedules.index', compact('dateSchedules'));
     }
 
     /**

@@ -15,42 +15,42 @@ class MovieSeeder extends Seeder
     {
     DB::table('movies')->insert([
       [
-        'name' => 'アイロンマン',
+        'title' => 'アイロンマン',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
         'published_date' => '1979/10/25',
       ],
       [
-        'name' => 'アイロンマン2',
+        'title' => 'アイロンマン2',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
         'published_date' => '1979/10/26',
       ],
       [
-        'name' => 'アイロンマン3',
+        'title' => 'アイロンマン3',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
         'published_date' => '1979/10/27',
       ],
       [
-        'name' => 'アイロンマン4',
+        'title' => 'アイロンマン4',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
         'published_date' => '1979/10/28',
       ],
       [
-        'name' => 'アイロンマン5',
+        'title' => 'アイロンマン5',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
         'published_date' => '1979/10/29',
       ],
       [
-        'name' => 'アイロンマン6',
+        'title' => 'アイロンマン6',
         'image_url' => 'theaterPoster.png',
         'description' => 'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
         'is_showing' => 1,
