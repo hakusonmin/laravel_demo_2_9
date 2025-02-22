@@ -12,7 +12,7 @@ class SheetController extends Controller
     public function listByHall(string $id) 
     {
     $sheets = Sheet::where('hall_id',$id)->get();
-    return view('web.admin.sheet.list-by-hall', compact('sheets'));
+    return view('web.admin.sheet.list_by_hall', compact('sheets'));
     }
 
     /**

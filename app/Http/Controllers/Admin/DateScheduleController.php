@@ -13,8 +13,8 @@ class DateScheduleController extends Controller
      */
     public function index(string $id)
     {
-      $dateSchedules = DateSchedule::where('movie_id', $id)->get();
-      return view('web.admin.date_schedules.index', compact('dateSchedules'));
+        $dateSchedules = DateSchedule::where('movie_id', $id)->get();
+        return view('web.admin.date_schedules.index', compact('dateSchedules'));
     }
 
     /**

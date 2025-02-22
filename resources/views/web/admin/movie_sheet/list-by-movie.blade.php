@@ -14,7 +14,7 @@
         @foreach ($movieSheets as $movieSheet)
             <div class="card">
                 <img class="image" src="{{ asset('./../storage/img/theater.jpg' )}}">
-                <div class="card-title">「{{ $movieSheet->price }}」</div>
+                <div class="card-title">{{ $movieSheet->price }}</div>
             </div>
         @endforeach
     </div>

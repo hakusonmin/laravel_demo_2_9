@@ -66,10 +66,9 @@ Route::middleware('auth')->group(function () {
 
     // dashboard関連をweb.phpから移動＆修正
     Route::middleware('verified')->group(function () {
-      Route::get('/dashboard', function () {
-          return view('web.user.dashboard');
-      })->name('dashboard');
-      // ここからverifiedなルートを追加可能
+        Route::get('/dashboard', function () {
+            return view('web.user.dashboard');
+        })->name('dashboard');
+        // ここからverifiedなルートを追加可能
     });
 });
-

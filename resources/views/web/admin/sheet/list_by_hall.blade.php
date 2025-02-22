@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Movie</title>
-      <link rel="stylesheet" href="{{ asset('./css/admin/sheet/list-by-hall.css') }}">
+      <link rel="stylesheet" href="{{ asset('./css/admin/sheet/list_by_hall.css') }}">
   </head>
   <body>
     @extends('layouts.layouts')
