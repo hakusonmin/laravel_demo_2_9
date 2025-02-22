@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\TimeSchedule;
 use Illuminate\Http\Request;
 
 class TimeScheduleController extends Controller
@@ -10,9 +11,10 @@ class TimeScheduleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $id)
     {
-        //
+        $timeSchedules = TimeSchedule::where('date_schedule_id', $id)->get();
+        return view('web.admin.timeSchedule.index', compact('timeSchedules'));
     }
 
     /**

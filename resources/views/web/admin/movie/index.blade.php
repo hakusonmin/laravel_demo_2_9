@@ -16,7 +16,7 @@
             <div class="card-container">
               @foreach ($movies as $movie)
                 <div class="card">
-                  <a href="{{ route('admin.movies.show', ['movie'=> $movie->id]) }}">
+                  <a href="{{ route('admin.movies.show', ['movies'=> $movie->id]) }}">
                     <img class="image" src="{{ asset('./../storage/img/' . $movie->image_url )}}">
                     <div class="card-title">{{ $movie->title }}</div>
                   </a>
@@ -25,7 +25,7 @@
             </div>
             <button class="back-button" type="button" onclick="location.href='{{ route('admin.index') }}'">戻る</button>
           </div>
-  
+
           @if (session('message'))
             <div class="alert alert-danger">
                 {{ session('message') }}

@@ -18,8 +18,10 @@
         <div class="card-container">
           @foreach ($dateSchedules as $dateSchedule)
             <div class="card">
-              <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
-              <div class="card-title">{{ $dateSchedule->date }}</div>
+              <a href="{{ route('admin.date_schedules.time_schedules.index', ['date_schedules' => $dateSchedule->id]) }}">
+                <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
+                <div class="card-title">{{ $dateSchedule->date }}</div>
+              </a>
             </div>
           @endforeach
         </div>
