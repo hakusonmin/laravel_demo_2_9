@@ -17,9 +17,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 //
-Route::prefix('admin')->name('admin.')->group(function () {
-  require __DIR__ . '/web_admin_default.php';
-});
+  require __DIR__ . '/web_admin_common.php';
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

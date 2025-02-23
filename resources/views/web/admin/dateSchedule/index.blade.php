@@ -20,12 +20,12 @@
             <div class="card">
               <a href="{{ route('admin.date_schedules.time_schedules.index', ['date_schedules' => $dateSchedule->id]) }}">
                 <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
-                <div class="card-title">{{ $dateSchedule->date }}</div>
+                <div class="card-title">{{ $dateSchedule->formatted_date }}</div>
               </a>
             </div>
           @endforeach
         </div>
-        <button class="back-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">戻る</button>
+        <button class="back-button" type="button" onClick="history.back();">戻る</button>
       </div>
 
       @if (session('message'))
