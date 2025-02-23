@@ -14,14 +14,12 @@
   @section('content')
     <section class="content">
       <div class="wrapper">
-        <h2 class="wrapper-title">時間一覧</h2>
+        <h2 class="wrapper-title">席一覧</h2>
         <div class="card-container">
-          @foreach ($timeSchedules as $timeSchedule)
+          @foreach ($tickets as $ticket)
             <div class="card">
-              <a href="{{ route('admin.tickets.index', ['time_schedule_id' => $timeSchedule->id]) }}">
-                <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
-                <div class="card-title">{{ $timeSchedule->formatted_start_time }} ~{{ $timeSchedule->formatted_end_time }}</div>
-              </a>
+              <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
+              <div class="card-title">{{ $ticket->sheet->hall->title}}ホールの{{ $ticket->sheet->title}}席</div>
             </div>
           @endforeach
         </div>

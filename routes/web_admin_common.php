@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DateScheduleController;
 use App\Http\Controllers\Admin\HallController;
 use App\Http\Controllers\Admin\SheetController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\Admin\TicketController;
 use App\Http\Controllers\Admin\TimeScheduleController;
 use Illuminate\Support\Facades\Route;
 
@@ -71,5 +72,5 @@ Route::prefix('admin')
                 Route::delete('{sheets}', 'destroy')->name('destroy');
             });
 
-
+        Route::resource('tickets', TicketController::class);
     });

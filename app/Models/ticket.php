@@ -9,4 +9,9 @@ class Ticket extends Model
 {
     /** @use HasFactory<\Database\Factories\TicketFactory> */
     use HasFactory;
+
+    public function sheet()  // 親テーブルが `events` の場合
+    {
+        return $this->belongsTo(Sheet::class);
+    }
 }

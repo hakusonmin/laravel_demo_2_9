@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -10,9 +11,13 @@ class TicketController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $time_schedule_id = $request->query('time_schedule_id');
+        $tickets = Ticket::where('time_schedule_id', $time_schedule_id)
+            ->with('sheet', 'sheet.hall')
+            ->get();
+        return view('web.admin.ticket.index', compact('tickets'));
     }
 
     /**
