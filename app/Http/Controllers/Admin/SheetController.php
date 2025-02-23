@@ -11,9 +11,10 @@ class SheetController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(string $id)
+    public function index(Request $request)
     {
-        $sheets = Sheet::where('hall_id', $id)->get();
+        $hall_id = $request->query('hall_id');
+        $sheets = Sheet::where('hall_id', $hall_id)->get();
         return view('web.admin.sheet.index', compact('sheets'));
     }
 

@@ -18,7 +18,7 @@
         <div class="card-container">
           @foreach ($halls as $hall)
             <div class="card">
-              <a href="{{ route('admin.halls.sheets.index', ['halls' => $hall->id]) }}">
+              <a href="{{ route('admin.sheets.index', ['hall_id' => $hall->id]) }}">
                 <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
                 <div class="card-title">{{ $hall->title }}</div>
               </a>

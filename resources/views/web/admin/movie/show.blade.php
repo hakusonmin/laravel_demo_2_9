@@ -36,7 +36,7 @@
             <div class="form-element-wrapper-content">{{ $movie->description }}</div>
           </div>
 
-          <button class="jump-button" type="button" onclick="location.href='{{ route('admin.movies.date_schedules.index', ['movies' => $movie->id]) }}'">チケットを買う</button>
+          <button class="jump-button" type="button" onclick="location.href='{{ route('admin.date_schedules.index', ['movie_id' => $movie->id]) }}'">チケットを買う</button>
           <button class="back-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">戻る</button>
 
           @if ($errors->any())

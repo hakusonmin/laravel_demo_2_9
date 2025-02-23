@@ -11,9 +11,10 @@ class DateScheduleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(string $id)
+    public function index(Request $request)
     {
-        $dateSchedules = DateSchedule::where('movie_id', $id)->get();
+        $movie_id = $request->query('movie_id');
+        $dateSchedules = DateSchedule::where('movie_id', $movie_id)->get();
         return view('web.admin.dateSchedule.index', compact('dateSchedules'));
     }
 

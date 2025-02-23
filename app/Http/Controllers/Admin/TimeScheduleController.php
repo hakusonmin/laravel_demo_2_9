@@ -11,9 +11,10 @@ class TimeScheduleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(string $id)
+    public function index(Request $request)
     {
-        $timeSchedules = TimeSchedule::where('date_schedule_id', $id)->get();
+        $date_schedule_id = $request->query('date_schedule_id');
+        $timeSchedules = TimeSchedule::where('date_schedule_id', $date_schedule_id)->get();
         return view('web.admin.timeSchedule.index', compact('timeSchedules'));
     }
 

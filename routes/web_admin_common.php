@@ -30,9 +30,9 @@ Route::prefix('admin')
                 Route::delete('{movies}', 'destroy')->name('destroy');
             });
 
-        Route::prefix('movies/{movies}/date_schedules')
+        Route::prefix('date_schedules')
             ->controller(DateScheduleController::class)
-            ->as('movies.date_schedules.')
+            ->as('date_schedules.')
             ->group(function () {
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
@@ -43,12 +43,10 @@ Route::prefix('admin')
                 Route::delete('{date_schedules}', 'destroy')->name('destroy');
             });
 
-        //↓こんな感じで二個づつとっていけばいい
-        Route::prefix('date_schedules/{date_schedules}/time_schedules')
+        Route::prefix('time_schedules')
             ->controller(TimeScheduleController::class)
-            ->as('date_schedules.time_schedules.')
+            ->as('time_schedules.')
             ->group(function () {
-                Route::get('', 'index')->name('index');
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
@@ -60,30 +58,18 @@ Route::prefix('admin')
 
         Route::resource('halls', HallController::class);
 
-        Route::prefix('halls/{halls}/sheets')
-        ->controller(SheetController::class)
-        ->as('halls.sheets.')
-        ->group(function () {
-            Route::get('', 'index')->name('index');
-            Route::get('create', 'create')->name('create');
-            Route::post('', 'store')->name('store');
-            Route::get('{sheets}', 'show')->name('show');
-            Route::get('{sheets}/edit', 'edit')->name('edit');
-            Route::put('{sheets}', 'update')->name('update');
-            Route::delete('{sheets}', 'destroy')->name('destroy');
-        });
+        Route::prefix('sheets')
+            ->controller(SheetController::class)
+            ->as('sheets.')
+            ->group(function () {
+                Route::get('', 'index')->name('index');
+                Route::get('create', 'create')->name('create');
+                Route::post('', 'store')->name('store');
+                Route::get('{sheets}', 'show')->name('show');
+                Route::get('{sheets}/edit', 'edit')->name('edit');
+                Route::put('{sheets}', 'update')->name('update');
+                Route::delete('{sheets}', 'destroy')->name('destroy');
+            });
 
-        Route::prefix('time_schedules/{movies}/date_schedules')
-        ->controller(DateScheduleController::class)
-        ->as('movies.date_schedules.')
-        ->group(function () {
-            Route::get('', 'index')->name('index');
-            Route::get('create', 'create')->name('create');
-            Route::post('', 'store')->name('store');
-            Route::get('{date_schedules}', 'show')->name('show');
-            Route::get('{date_schedules}/edit', 'edit')->name('edit');
-            Route::put('{date_schedules}', 'update')->name('update');
-            Route::delete('{date_schedules}', 'destroy')->name('destroy');
-        });
 
     });

@@ -17,13 +17,13 @@
               @foreach ($sheets as $sheet)
                   <div class="card">
                       <img class="image" src="{{ asset('./../storage/img/theaterPoster.png' )}}">
-                      <div class="card-title">「{{ $sheet->title }}」</div>
+                      <div class="card-title">{{ $sheet->title }}</div>
                   </div>
               @endforeach
           </div>
           <button class="back-button" type="button" onclick="location.href='{{ route('admin.halls.index') }}'">戻る</button>
         </div>
-      
+
         @if (session('message'))
           <div class="alert alert-danger">
               {{ session('message') }}
