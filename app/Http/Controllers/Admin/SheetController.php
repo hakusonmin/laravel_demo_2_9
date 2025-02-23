@@ -8,19 +8,13 @@ use Illuminate\Http\Request;
 
 class SheetController extends Controller
 {
-
-    public function listByHall(string $id) 
-    {
-    $sheets = Sheet::where('hall_id',$id)->get();
-    return view('web.admin.sheet.list_by_hall', compact('sheets'));
-    }
-
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $id)
     {
-      //
+        $sheets = Sheet::where('hall_id', $id)->get();
+        return view('web.admin.sheet.index', compact('sheets'));
     }
 
     /**

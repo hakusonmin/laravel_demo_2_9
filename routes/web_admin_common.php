@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DateScheduleController;
-use App\Http\Controllers\Admin\HallController as AdminHallController;
+use App\Http\Controllers\Admin\HallController;
 use App\Http\Controllers\Admin\SheetController;
 use App\Http\Controllers\Admin\MovieController;
 use App\Http\Controllers\Admin\TimeScheduleController;
@@ -11,10 +11,6 @@ Route::prefix('admin')
     ->middleware('auth:admin')
     ->name('admin.')
     ->group(function () {
-
-        Route::resource('halls', AdminHallController::class);
-
-        Route::get('/{id}/list_by_hall', [SheetController::class, 'listByHall'])->name('sheets.list_by_hall');
 
         //管理者ダッシュボードへのルーティング
         Route::get('/', function () {
@@ -61,4 +57,20 @@ Route::prefix('admin')
                 Route::put('{times_chedules}', 'update')->name('update');
                 Route::delete('{times_chedules}', 'destroy')->name('destroy');
             });
+
+        Route::resource('halls', HallController::class);
+
+        Route::prefix('halls/{halls}/sheets')
+        ->controller(SheetController::class)
+        ->as('halls.sheets.')
+        ->group(function () {
+            Route::get('', 'index')->name('index');
+            Route::get('create', 'create')->name('create');
+            Route::post('', 'store')->name('store');
+            Route::get('{sheets}', 'show')->name('show');
+            Route::get('{sheets}/edit', 'edit')->name('edit');
+            Route::put('{sheets}', 'update')->name('update');
+            Route::delete('{sheets}', 'destroy')->name('destroy');
+        });
+
     });
