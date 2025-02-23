@@ -73,4 +73,17 @@ Route::prefix('admin')
             Route::delete('{sheets}', 'destroy')->name('destroy');
         });
 
+        Route::prefix('time_schedules/{movies}/date_schedules')
+        ->controller(DateScheduleController::class)
+        ->as('movies.date_schedules.')
+        ->group(function () {
+            Route::get('', 'index')->name('index');
+            Route::get('create', 'create')->name('create');
+            Route::post('', 'store')->name('store');
+            Route::get('{date_schedules}', 'show')->name('show');
+            Route::get('{date_schedules}/edit', 'edit')->name('edit');
+            Route::put('{date_schedules}', 'update')->name('update');
+            Route::delete('{date_schedules}', 'destroy')->name('destroy');
+        });
+
     });
