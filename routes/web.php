@@ -16,5 +16,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
   require __DIR__ . '/web_admin.php';
 });
 
-//
   require __DIR__ . '/web_admin_common.php';
