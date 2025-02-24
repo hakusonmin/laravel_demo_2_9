@@ -59,18 +59,7 @@ Route::prefix('admin')
 
         Route::resource('halls', HallController::class);
 
-        Route::prefix('sheets')
-            ->controller(SheetController::class)
-            ->as('sheets.')
-            ->group(function () {
-                Route::get('', 'index')->name('index');
-                Route::get('create', 'create')->name('create');
-                Route::post('', 'store')->name('store');
-                Route::get('{sheet}', 'show')->name('show');
-                Route::get('{sheet}/edit', 'edit')->name('edit');
-                Route::put('{sheet}', 'update')->name('update');
-                Route::delete('{sheet}', 'destroy')->name('destroy');
-            });
+        Route::resource('sheets', SheetController::class);
 
         Route::resource('tickets', TicketController::class);
     });
