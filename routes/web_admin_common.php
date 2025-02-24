@@ -25,10 +25,10 @@ Route::prefix('admin')
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
-                Route::get('{movies}', 'show')->name('show');
-                Route::get('{movies}/edit', 'edit')->name('edit');
-                Route::put('{movies}', 'update')->name('update');
-                Route::delete('{movies}', 'destroy')->name('destroy');
+                Route::get('{movie}', 'show')->name('show');
+                Route::get('{movie}/edit', 'edit')->name('edit');
+                Route::put('{movie}', 'update')->name('update');
+                Route::delete('{movie}', 'destroy')->name('destroy');
             });
 
         Route::prefix('date_schedules')
@@ -38,10 +38,10 @@ Route::prefix('admin')
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
-                Route::get('{date_schedules}', 'show')->name('show');
-                Route::get('{date_schedules}/edit', 'edit')->name('edit');
-                Route::put('{date_schedules}', 'update')->name('update');
-                Route::delete('{date_schedules}', 'destroy')->name('destroy');
+                Route::get('{date_schedule}', 'show')->name('show');
+                Route::get('{date_schedule}/edit', 'edit')->name('edit');
+                Route::put('{date_schedule}', 'update')->name('update');
+                Route::delete('{date_schedule}', 'destroy')->name('destroy');
             });
 
         Route::prefix('time_schedules')
@@ -51,10 +51,10 @@ Route::prefix('admin')
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
-                Route::get('{times_chedules}', 'show')->name('show');
-                Route::get('{times_chedules}/edit', 'edit')->name('edit');
-                Route::put('{times_chedules}', 'update')->name('update');
-                Route::delete('{times_chedules}', 'destroy')->name('destroy');
+                Route::get('{times_chedule}', 'show')->name('show');
+                Route::get('{times_chedule}/edit', 'edit')->name('edit');
+                Route::put('{times_chedule}', 'update')->name('update');
+                Route::delete('{times_chedule}', 'destroy')->name('destroy');
             });
 
         Route::resource('halls', HallController::class);
@@ -66,10 +66,10 @@ Route::prefix('admin')
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
-                Route::get('{sheets}', 'show')->name('show');
-                Route::get('{sheets}/edit', 'edit')->name('edit');
-                Route::put('{sheets}', 'update')->name('update');
-                Route::delete('{sheets}', 'destroy')->name('destroy');
+                Route::get('{sheet}', 'show')->name('show');
+                Route::get('{sheet}/edit', 'edit')->name('edit');
+                Route::put('{sheet}', 'update')->name('update');
+                Route::delete('{sheet}', 'destroy')->name('destroy');
             });
 
         Route::resource('tickets', TicketController::class);

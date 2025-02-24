@@ -18,8 +18,10 @@
         <div class="card-container">
           @foreach ($tickets as $ticket)
             <div class="card">
-              <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
-              <div class="card-title">{{ $ticket->sheet->hall->title}}ホールの{{ $ticket->sheet->title}}席</div>
+              <a href="{{ route('admin.tickets.show', ['ticket' => $ticket->id]) }}">
+                <img class="image" src="{{ asset('./../storage/img/theaterPoster.png') }}">
+                <div class="card-title">{{ $ticket->sheet->hall->title }}ホールの{{ $ticket->sheet->title }}席</div>
+              </a>
             </div>
           @endforeach
         </div>

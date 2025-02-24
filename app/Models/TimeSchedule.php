@@ -12,7 +12,7 @@ class TimeSchedule extends Model
     /** @use HasFactory<\Database\Factories\TimeScheduleFactory> */
     use HasFactory;
 
-    public function date_schedule()
+    public function dateSchedule()
     {
         return $this->belongsTo(DateSchedule::class);
     }

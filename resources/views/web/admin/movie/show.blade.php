@@ -28,7 +28,7 @@
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="published_date">公開日</label></div>
-            <div class="form-element-wrapper-content">{{ $movie->published_date }}</div>
+            <div class="form-element-wrapper-content">{{ $movie->formattedPublishedDate}}</div>
           </div>
 
           <div class="form-element-wrapper">
@@ -36,7 +36,7 @@
             <div class="form-element-wrapper-content">{{ $movie->description }}</div>
           </div>
 
-          <button class="jump-button" type="button" onclick="location.href='{{ route('admin.date_schedules.index', ['movie_id' => $movie->id]) }}'">チケットを買う</button>
+          <button class="jump-button" type="button" onclick="location.href='{{ route('admin.date_schedules.index', ['movie_id' => $movie->id]) }}'">チケット購入画面へ</button>
           <button class="back-button" type="button" onclick="location.href='{{ route('admin.movies.index') }}'">戻る</button>
 
           @if ($errors->any())

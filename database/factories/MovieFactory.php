@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Blade;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,6 @@ class MovieFactory extends Factory
     public function definition(): array
     {
         static $count = 1;
-
         return [
             'id' => $count++,
             'title' => $this->faker->unique()->word,
