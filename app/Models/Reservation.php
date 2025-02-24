@@ -9,4 +9,9 @@ class Reservation extends Model
 {
     /** @use HasFactory<\Database\Factories\ReservationFactory> */
     use HasFactory;
+
+    public function ticket()
+    {
+        return $this->belongsTo(Ticket::class);
+    }
 }

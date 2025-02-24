@@ -10,7 +10,7 @@ class Sheet extends Model
     /** @use HasFactory<\Database\Factories\SheetFactory> */
     use HasFactory;
 
-    public function hall()  // 親テーブルが `events` の場合
+    public function hall() 
     {
         return $this->belongsTo(Hall::class);
     }

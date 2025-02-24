@@ -12,6 +12,11 @@ class TimeSchedule extends Model
     /** @use HasFactory<\Database\Factories\TimeScheduleFactory> */
     use HasFactory;
 
+    public function date_schedule()
+    {
+        return $this->belongsTo(DateSchedule::class);
+    }
+
     public function getFormattedStartTimeAttribute()
     {
         return Carbon::createFromFormat('H:i:s', $this->start_time)->format('G時i分');
