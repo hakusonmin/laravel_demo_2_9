@@ -28,7 +28,7 @@
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="published_date">公開日</label></div>
-            <div class="form-element-wrapper-content">{{ $movie->formattedPublishedDate}}</div>
+            <div class="form-element-wrapper-content">{{ $movie->formatted_published_date}}</div>
           </div>
 
           <div class="form-element-wrapper">

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DateScheduleController;
 use App\Http\Controllers\Admin\HallController;
 use App\Http\Controllers\Admin\SheetController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TicketController;
 use App\Http\Controllers\Admin\TimeScheduleController;
 use Illuminate\Support\Facades\Route;
@@ -62,4 +63,6 @@ Route::prefix('admin')
         Route::resource('sheets', SheetController::class);
 
         Route::resource('tickets', TicketController::class);
+
+        Route::resource('reservaions', ReservationController::class);
     });

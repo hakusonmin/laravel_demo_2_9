@@ -28,7 +28,7 @@
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="published_date">公開日</label></div>
-            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->dateSchedule->movie->formattedPublishedDate }}</div>
+            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->dateSchedule->movie->formatted_published_date }}</div>
           </div>
 
           <div class="form-element-wrapper">
@@ -38,17 +38,17 @@
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="description">日付</label></div>
-            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->dateSchedule->formattedDate }}</div>
+            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->dateSchedule->formatted_date }}</div>
           </div>
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="description">公演開始時間</label></div>
-            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->formattedStartTime }}</div>
+            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->formatted_start_time}}</div>
           </div>
 
           <div class="form-element-wrapper">
             <div class="form-element-wrapper-title"><label for="description">講演終了時間</label></div>
-            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->formattedEndTime }}</div>
+            <div class="form-element-wrapper-content">{{ $ticket->timeSchedule->formatted_end_time}}</div>
           </div>
 
           <div class="form-element-wrapper">
