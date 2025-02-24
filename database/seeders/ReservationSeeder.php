@@ -16,7 +16,11 @@ class ReservationSeeder extends Seeder
     DB::table('reservations')->insert([
       [
         'user_id' => 1,
-        'ticket_id' => 1,
+        'ticket_id' => 2,
+      ],
+      [
+        'user_id' => 1,
+        'ticket_id' => 3,
       ],
     ]);
     }

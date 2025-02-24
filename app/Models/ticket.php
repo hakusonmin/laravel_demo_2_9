@@ -10,7 +10,11 @@ class Ticket extends Model
     /** @use HasFactory<\Database\Factories\TicketFactory> */
     use HasFactory;
 
-    public function timeSchedule() 
+    protected $fillable = [
+        'is_reserved',
+    ];
+
+    public function timeSchedule()
     {
         return $this->belongsTo(TimeSchedule::class,);
     }

@@ -64,5 +64,5 @@ Route::prefix('admin')
 
         Route::resource('tickets', TicketController::class);
 
-        Route::resource('reservaions', ReservationController::class);
+        Route::resource('reservations', ReservationController::class);
     });

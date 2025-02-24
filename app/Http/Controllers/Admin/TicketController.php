@@ -47,9 +47,8 @@ class TicketController extends Controller
      */
     public function show(string $id)
     {
-        $ticket = Ticket::findOrFail($id)
-            ->with('sheet', 'sheet.hall', 'timeSchedule', 'timeSchedule.dateSchedule', 'timeSchedule.dateSchedule.movie')
-            ->first();
+        $ticket = Ticket::with('sheet', 'sheet.hall', 'timeSchedule', 'timeSchedule.dateSchedule', 'timeSchedule.dateSchedule.movie')
+            ->findOrFail($id);
 
         return view('web.admin.ticket.show', compact('ticket'));
     }
