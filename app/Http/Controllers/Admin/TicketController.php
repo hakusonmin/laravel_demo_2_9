@@ -14,9 +14,15 @@ class TicketController extends Controller
     public function index(Request $request)
     {
         $time_schedule_id = $request->query('time_schedule_id');
+
         $tickets = Ticket::where('time_schedule_id', $time_schedule_id)
+            ->where('is_reserved', 0)
+            ->whereHas('timeSchedule.dateSchedule.movie', function ($query) {
+                $query->where('is_showing', 1);
+            })
             ->with('sheet', 'sheet.hall')
             ->get();
+
         return view('web.admin.ticket.index', compact('tickets'));
     }
 
