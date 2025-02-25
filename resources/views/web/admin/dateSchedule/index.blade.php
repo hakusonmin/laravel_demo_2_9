@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Movie</title>
+@push('styles')
   <link rel="stylesheet" href="{{ asset('./css/admin/date_schedule/index.css') }}">
-</head>
+@endpush
 
 <body>
   @extends('layouts.layouts')
@@ -28,13 +21,6 @@
         <button class="back-button" type="button" onClick="history.back();">戻る</button>
       </div>
 
-      @if (session('message'))
-        <div class="alert alert-danger">
-          {{ session('message') }}
-        </div>
-      @endif
     </section>
   @endsection
-</body>
 
-</html>

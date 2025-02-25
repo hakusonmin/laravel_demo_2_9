@@ -68,9 +68,3 @@ body {
     color: var(--white);
     background-color: var(--black);
 }
-
-.alert.alert-danger {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 23px;
-}

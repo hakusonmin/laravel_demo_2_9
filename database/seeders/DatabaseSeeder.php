@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      */
     public function run(): void
-    {        
+    {
       $this->call([
         AdminSeeder::class,
         UserSeeder::class,
@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
         DateScheduleSeeder::class,
         TimeScheduleSeeder::class,
         TicketSeeder::class,
-        ReservationSeeder::class,
       ]);
     }
 }

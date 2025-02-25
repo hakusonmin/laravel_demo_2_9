@@ -14,14 +14,7 @@ class ReservationSeeder extends Seeder
     public function run(): void
     {
     DB::table('reservations')->insert([
-      [
-        'user_id' => 1,
-        'ticket_id' => 2,
-      ],
-      [
-        'user_id' => 1,
-        'ticket_id' => 3,
-      ],
+        //
     ]);
     }
 }

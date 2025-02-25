@@ -73,11 +73,7 @@ class ReservationController extends Controller
     public function show(string $id)
     {
         $reservation = Reservation::with(
-            'ticket',
-            'ticket.sheet',
             'ticket.sheet.hall',
-            'ticket.timeSchedule',
-            'ticket.timeSchedule.dateSchedule',
             'ticket.timeSchedule.dateSchedule.movie'
         )->findOrFail($id);
 
@@ -108,3 +104,5 @@ class ReservationController extends Controller
         //
     }
 }
+
+
