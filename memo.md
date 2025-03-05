@@ -10,3 +10,4 @@ php artisan migrate
 .git を削除
 git init
 あとはいつもの手順
+ 
